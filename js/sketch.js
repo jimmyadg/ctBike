@@ -27,7 +27,8 @@ init();
 animate();
 
 function init() {
-  document.getElementById("d").innerHTML = "DATE " + date[selector];
+  document.title = "ctBike " + date[selector];
+  document.getElementById("d").innerHTML =trips24[selector] + " trips";
   container = document.createElement( 'div' );
   document.body.appendChild( container );
 
