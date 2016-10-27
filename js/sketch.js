@@ -27,8 +27,8 @@ init();
 animate();
 
 function init() {
-  document.title = "ctBike " + date[selector];
-  document.getElementById("d").innerHTML =trips24[selector] + " trips";
+  document.title = "ctBike " + date[selector]
+  document.getElementById("d").innerHTML = trips24[selector] + " trips";
   container = document.createElement( 'div' );
   document.body.appendChild( container );
 
@@ -42,7 +42,7 @@ function init() {
     //blending: THREE.AdditiveBlending
   } );
 
-  for ( var i = 0; i < trips24[selector]; i++ ) {
+  for ( var i = 0; i < mToday[selector]/100; i++ ) {
 
     particle = new THREE.Sprite( material );
 
