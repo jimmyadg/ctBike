@@ -14,6 +14,7 @@ var yMemeber = getElm(data.yMemeber);
 var p24 = getElm(data.p24);
 var p3d = getElm(data.p3d);
 var selector = 0;
+var c;
 
 
 var container;
@@ -26,9 +27,20 @@ var windowHalfY = window.innerHeight / 2;
 init();
 animate();
 
+function infoDis(){
+  if(x = trips24[selector]+ " trips"){
+    x = p24[selector] + " 24HR PASS";
+  }else if(x = p24[selector] + " 24HR PASS"){
+    x = p3d[selector] + " 3 DAY PASS";
+  }else if(x = p3d[selector] + " 3 DAY PASS"){
+    x = mToday + " MILES TODAY"
+  }
+}
+
 function init() {
+  x = trips24[selector]+ " trips";
   document.title = "ctBike " + date[selector];
-  document.getElementById("d").innerHTML =trips24[selector] + " trips";
+  document.getElementById("d").innerHTML = x;
   container = document.createElement( 'div' );
   document.body.appendChild( container );
 
@@ -180,7 +192,7 @@ function animate() {
 function render() {
 
   TWEEN.update();
-
+  document.getElementById("d").innerHTML = x;
   camera.position.x += ( mouseX - camera.position.x ) * 0.05;
   camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
   camera.lookAt( scene.position );
