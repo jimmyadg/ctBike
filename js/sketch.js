@@ -42,7 +42,7 @@ function init() {
     //blending: THREE.AdditiveBlending
   } );
 
-  for ( var i = 0; i < mToday[selector]; i++ ) {
+  for ( var i = 0; i < mToday[selector]/100; i++ ) {
 
     particle = new THREE.Sprite( material );
 
