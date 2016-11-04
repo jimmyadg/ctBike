@@ -28,7 +28,7 @@ animate();
 
 function init() {
   document.title = "ctBike " + date[selector]
-  document.getElementById("d").innerHTML = trips24[selector] + " trips";
+  document.getElementById("d").innerHTML = trips24[selector] + " trips" + "</br>" + mToday[selector] + " miles"+"</br>"+ "traveled today";
   container = document.createElement( 'div' );
   document.body.appendChild( container );
 
